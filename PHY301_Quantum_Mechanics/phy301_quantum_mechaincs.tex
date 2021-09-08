@@ -1,0 +1,71 @@
+\documentclass[12pt, a4paper, oneside]{article}
+\usepackage{amsmath, amsthm, amssymb, bm, graphicx, mathrsfs}
+\usepackage{hyperref} % content with links
+\usepackage{bookmark, geometry}
+\geometry{a4paper,scale=0.8}
+
+\usepackage[english]{babel} % English formatting
+\usepackage{fancyhdr} % Fancy headers
+
+\title{{\Huge{\textbf{PHY 301}}}\\\Huge{\textbf{Quantum Mechanics}}}
+\author{Chongfeng Ling}
+\date{2021-2022}
+\linespread{1.5}
+
+% \newtheorem{theorem}{Theorem}
+% \newtheorem{definition}[theorem]{定义}
+% \newtheorem{lemma}[theorem]{引理}
+% \newtheorem{corollary}[theorem]{推论}
+% \newtheorem{example}[theorem]{例}
+% \newtheorem{proposition}[theorem]{命题}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{remark}{Remark}[section]
+
+
+% short commands
+\newcommand{\rr}{\mathbb{R}}
+
+%~~~~~~~~~ Page setup
+\pagestyle{fancy}
+\fancyhf{}
+\lfoot{PHY301}
+\rfoot{Page \thepage}
+\renewcommand{\footrulewidth}{0.2pt}
+\renewcommand{\headrulewidth}{0pt}
+
+
+\begin{document}
+
+% center cover page
+\null  % Empty line
+\nointerlineskip  % No skip for prev line
+\vfill
+\let\snewpage \newpage
+\let\newpage \relax
+\maketitle
+\setcounter{page}{0}
+\thispagestyle{empty}
+\let \newpage \snewpage
+\vfill
+\break % page break
+
+% content page
+\newpage
+\pagenumbering{Roman}
+\setcounter{page}{1}
+\tableofcontents
+
+
+\renewcommand\thepart{\Alph{part}}
+
+\newpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\input{1_introduction.tex}
+
+% \newpage
+
+\input{2_wave_function.tex}
+
+\end{document}
