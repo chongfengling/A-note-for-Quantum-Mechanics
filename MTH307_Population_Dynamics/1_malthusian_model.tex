@@ -160,19 +160,65 @@ by \myref{eq1.6} as $\tau \rightarrow 0$ and Taylor series.
 }
 
 \subsubsection{Verhulst (Logistic) Model}
+\paragraph{Equation}~{}\\
+A simplest guess of $r(N)$ by Verhulst is 
+$$
+r=r_{0}(1-N / K)
+$$
+$r_0$ is called maximal per capita reproduction rate.\\
+Then the dynamic equation is
+\begin{align}
+    \mathrm{d} N / \mathrm{d} t=r_{0} N(1-N / K) \label{eq1.7}
+\end{align}
+\myref{eq1.7} is non-linear.
+\newpage
+\paragraph{Solution}~{}\\
+Solve \myref{eq1.7} with initial value $N(0)=N_0$.
+\subparagraph{When $N_0=0$, $N(t)=0$ for $t \in (0,\infty) $}
+\subparagraph{When $N_0>0, N(t) \rightarrow K $ as $ t \rightarrow+\infty$.}
+\begin{gather*}
+    \mathrm{d} N / \mathrm{d} t=r N(1-N / K)\\
+    N(t)=\frac{K}{1+\left(K / N_{0}-1\right) e^{-r t}}
+\end{gather*}
+Graph!\\
+K is called \emph{\textbf{carrying capacity}}.
 
 \newpage
 \subsubsection{Richards Model}
+\paragraph{Equation}~{}\\
+Another guess of $r$ is 
+$$
+r=r_0\left(1-(N / K)^{\nu}\right)
+$$
+$$
+v =\text{ constant } >0
+$$
+Then the dynamic equation is
+\begin{align}
+    \mathrm{d} N / \mathrm{d} t=r N(1-(N / K)^v) \label{eq1.8}
+\end{align}
+
+\paragraph{Solution}~{}\\
+Solve \myref{eq1.8} using substitution (i.e. let $u=(\frac{N}{K})^{-v})$. 
+
+\begin{equation*}
+    N(t)= \begin{cases}\frac{k}{\left[\left(\left(\frac{k}{N_{0}}\right)^{\nu}-1\right) e^{-v r t}+1\right]^{\frac{1}{v}}} &,N(0)\ne 0 \text{ or } k \\ 0&,N(0)=0 \\ k&,N(0)=k\end{cases}
+\end{equation*}
+
 
 \newpage
 
+\subsubsection{General case}
+Any \emph{\textbf{single-species continuous time}} equation is solved in \emph{\textbf{quadratures}}
+\begin{align*}
+    \mathrm{d} N / \mathrm{d} t=r(N) N=f(N)\\
+    \int_{N_{0}}^{N} \frac{\mathrm{d} N}{f(N)}=\int_{0}^{t} \mathrm{~d} t=t
+\end{align*}
+with special solutions (equilibria).
 
-\paragraph{First paragraph}
-paragraph
+\subsection{Single Species continuous Model: qualitative analysis}
 
-\subparagraph{First subparagraph}
-subparagraph
 
-\begin{theorem}[Helge Tverberg 1966]
-    Given $(r-1)(d+1)+1$ points in $\rr^d$, there is a partition of them into $r$ parts whose convex hulls intersect.
-\end{theorem}
+\newpage
+
+\subsection{Spruce Budworm outbreak}
