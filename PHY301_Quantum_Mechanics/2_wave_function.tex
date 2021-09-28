@@ -12,15 +12,15 @@
 
 \begin{remark}
     $
-        \langle f(x)\rangle(t) = |\Psi(x,t)|^2
+        |\Psi(x,t)|^2
     $
     is the p.d.f. of finding the particle in position x at time t.
 \end{remark}
 \begin{remark}
     $
-        \langle F(x)\rangle(t) = \int_{-\infty}^{+\infty} |\Psi(x,t)|^2 dx
+        \int_{a}^{b} |\Psi(x,t)|^2 dx
     $
-    is the c.d.f of finding the particle between position $[-\infty, x]$ at time t.
+    is the c.d.f of finding the particle between position $[a, b]$ at time t.
 \end{remark}
 \begin{remark}
     Integration is over \textbf{space}, t is a \textbf{parameter}.
@@ -30,7 +30,7 @@
 These two statistics are expressed as integrals over the entire space. They are \textbf{deterministic functions of time}. Given wave function $\Psi$, then we have: 
 $$
 \begin{gathered}
-    \langle E(x)\rangle(t)=\int_{-\infty}^{+\infty} x|\Psi(x, t)|^{2} d x\\
-    \langle Var(x)\rangle(t)=\int_{-\infty}^{+\infty}(x-\langle E(x)\rangle(t))^{2}|\Psi(x, t)|^{2} d x
+    \langle x\rangle(t)=\int_{-\infty}^{+\infty} x|\Psi(x, t)|^{2} d x\\
+    \langle Var(x)\rangle(t)=\int_{-\infty}^{+\infty}(x-\langle x\rangle(t))^{2}|\Psi(x, t)|^{2} d x
 \end{gathered}
 $$
