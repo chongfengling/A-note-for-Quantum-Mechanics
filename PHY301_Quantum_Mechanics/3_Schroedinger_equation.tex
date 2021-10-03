@@ -1,0 +1,69 @@
+\section{The Schrödinger equation}
+
+One dimension's Schrödinger equation for wave wave function $\Psi$ ($x \in \mathbf{R}$ is a space coordinate, $t$ is time, $V$ is a \textbf{real-valued potential}) is
+\begin{equation}\boxed{
+        i \hbar \frac{\partial \Psi(x, t)}{\partial t}=-\frac{\hbar^{2}}{2 m} \frac{\partial^{2}}{\partial x^{2}} \Psi(x, t)+V(x) \Psi(x, t)}\label{eq1}
+\end{equation}
+Complex conjugate form is
+\begin{equation}\boxed{
+        -i \hbar \frac{\partial \Psi^{*}}{\partial t}(x, t)=-\frac{\hbar^{2}}{2 m} \frac{\partial^{2}}{\partial x^{2}} \Psi^{*}(x, t)+V(x) \Psi^{*}(x, t)}\label{eq2}
+\end{equation}
+Planck constant $\hbar$ is
+$$
+    \hbar=\frac{h}{2 \pi} \simeq 1.05 \times 10^{-34} \mathrm{~kg} \cdot \mathrm{m}^{2} \cdot \mathrm{s}^{-1}
+$$
+\begin{assumption}\label{ass1}
+    $\Psi$ and all its derivatives are smooth and go to zero when $|x|$ goes to infinity, faster than any negative power of $x$.
+\end{assumption}
+
+\subsection{Normalization}
+Due to its definition, the wave function has to be normalized at all time. That is, for all t, we have
+\begin{equation}\boxed{
+        \int_{-\infty}^{\infty} \Psi^{*}(x, t) \Psi(x, t) d x=1}\label{eq3}
+\end{equation}
+
+\begin{remark}
+    Not all solutions of the Schrödinger equation are wave function.
+\end{remark}
+\begin{theorem}
+    A normalized wave function stays normalized.
+\end{theorem}
+\begin{proof}
+    For a normalized wave function at time $t=0$:
+    $$
+        \int_{-\infty}^{\infty} \Psi^{*}(x, 0) \Psi(x, 0) d x=1
+    $$
+    consider $t>0$:
+    $$
+        \begin{aligned}
+             & \frac{d}{d t}\left(\int_{-\infty}^{\infty} \Psi^{*}(x, t) \Psi(x, t) d x\right)                                                                                                            \\
+             & =\int_{-\infty}^{+\infty} \frac{\partial \Psi^{*}(x, t)}{\partial t} \Psi(x, t) d x+\int_{-\infty}^{+\infty} \Psi^{*}(x, t) \frac{\partial \Psi(x, t)}{\partial t} d x                     \\
+             & =\frac{1}{i \hbar} \int_{-\infty}^{+\infty}\left(+\frac{\hbar^{2}}{2 m} \frac{\partial^{2} \Psi^{*}(x, t)}{\partial x^{2}}-V(x) \Psi^{*}(x, t)\right) \Psi(x, t) d x+                      \\
+             & \frac{1}{i \hbar} \int_{-\infty}^{+\infty} \Psi^{*}(x, t)\left(-\frac{\hbar^{2}}{2 m} \frac{\partial^{2} \Psi(x, t)}{\partial x^{2}}+V(x) \Psi(x, t)\right) d x                            \\
+             & =\frac{\hbar}{2 m i}\left(\left[\Psi \frac{\partial}{\partial x} \Psi^{*}\right]_{-\infty}^{+\infty}-\int \frac{\partial}{\partial x} \Psi^{*} \frac{\partial}{\partial x} \Psi d x\right. \\
+             & \left.-\left[\Psi^{*}\frac{\partial}{\partial x} \Psi \right]_{-\infty}^{+\infty}+\int \frac{\partial}{\partial x} \Psi \frac{\partial}{\partial x} \Psi^{*} d x\right)                    \\
+             & =0
+        \end{aligned}
+    $$
+    by  Assumption \ref{ass1}. Hence, $\Psi$ is normalized at all time.
+\end{proof}
+
+\subsection{Linear momentum}
+We can not know actual position of a particle, hence we use the expectation of position $\langle x\rangle(t)$ instead.
+\begin{equation}\boxed{
+        \langle x\rangle(t)=\int_{-\infty}^{+\infty}  \Psi^{*}(x, t) x \Psi(x, t) d x}\label{eq4}
+\end{equation}
+the velocity of a particle is
+\begin{equation}\boxed{
+        \langle V\rangle = \frac{d\langle x\rangle}{d t}}\label{eq5}
+\end{equation}
+the average linear momentum is
+\begin{equation}\boxed{
+        \langle p\rangle=\int_{-\infty}^{+\infty} \Psi^{*}(x, t)\left(-i \hbar \frac{\partial}{\partial x}\right) \Psi(x, t) d x}\label{eq6}
+\end{equation}
+\begin{proof}
+    ...
+\end{proof}
+
+\subsection{From the Schrödinger equation to the Newton law}
+...
