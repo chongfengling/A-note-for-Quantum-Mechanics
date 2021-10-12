@@ -25,6 +25,7 @@ Due to its definition, the wave function has to be normalized at all time. That 
 \begin{remark}
     Not all solutions of the Schrödinger equation are wave function.
 \end{remark}
+\boxed{parameter\; A?}
 \begin{theorem}
     A normalized wave function stays normalized.
 \end{theorem}
@@ -66,4 +67,64 @@ the average linear momentum is
 \end{proof}
 
 \subsection{From the Schrödinger equation to the Newton law}
+Ehrenfest's theorem
+\begin{equation}
+    \frac{d\langle p\rangle}{d t}=-\left\langle V^{\prime}(x)\right\rangle
+\end{equation}
+\boxed{obey\;classical\;laws?}
+
+
+\subsection{Correspondence principle}
+\boxed{why\;use\;operator?}\\
+\boxed{\hbar\;to\;0?}\\
+\textbf{Energy = kinetic energy + potential energy}
+
+\paragraph{Position operator}
+...
+
+\paragraph{Linear-momentum operator}
+...
+
+\paragraph{Hamiltonian operator}
+...
+
+\subsection{Separable solutions: time-independent solutions}
+Consider one kind of solutions of Schrödinger equation in the form:
+$$
+    \Psi(x, t)=: \psi(x) \phi(t)
+$$
+the Schrödinger equation becomes:
+\begin{align}
+    i \hbar \psi(x) \phi^{\prime}(t)         & =-\frac{\hbar^{2}}{2 m} \psi^{\prime \prime}(x) \phi(t)+V(x) \psi(x) \phi(t)    \\
+    i \hbar \frac{\phi^{\prime}(t)}{\phi(t)} & =-\frac{\hbar^{2}}{2 m} \frac{\psi^{\prime \prime}(x)}{\psi(x)}+V(x)\label{eq7}
+\end{align}
+\myref{eq7} is satisfied for all values of the independent variables $x$ and $t$, hence there exists a \textbf{constant number $E$} that \myref{eq7} $=E$ for both sides. We have
+\begin{align}
+    i \hbar \frac{\phi^{\prime}(t)}{\phi(t)}                            & =E \label{eq8} \\
+    -\frac{\hbar^{2}}{2 m} \frac{\psi^{\prime \prime}(x)}{\psi(x)}+V(x) & =E\label{eq9}
+\end{align}
+\paragraph{Time-dependent factor \myref{eq8}}~{}
+...
+\paragraph{Space-dependent factor \myref{eq9}}~{}
+...
+
+\begin{remark}
+    $E$ is a constant number.
+\end{remark}
+\begin{remark}
+    $E$ is a real number.
+\end{remark}
+\begin{proof}
+    ...
+\end{proof}
+\begin{remark}
+    $E \geq min(V(x))$
+\end{remark}
+\begin{proof}
+    ...
+\end{proof}
+\subsection{Example: the infinite square well}
+...
+
+\subsection{The free particle: time-dependent solutions}
 ...
