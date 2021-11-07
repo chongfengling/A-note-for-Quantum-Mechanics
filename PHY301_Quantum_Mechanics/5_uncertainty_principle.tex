@@ -1,0 +1,110 @@
+\section{Uncertainty Principle}
+
+\subsection{Hilbert space $L^2(\mathbf{R})$}
+
+\begin{definition}[Inner product]
+    For a pair of functions $f$ and $g$ of functions of one real variable with complex values, i.e., $f, g:\mathbf{R} \longrightarrow \mathbf{C}$. The inner product of f and g is
+$$
+\langle f \mid g\rangle=\int_{-\infty}^{+\infty} f^{*}(x) g(x) d x
+$$
+\end{definition}
+
+\begin{property}
+    $\langle f \mid g\rangle=\langle g \mid f\rangle^{*}$
+\end{property}
+
+\begin{proof}
+    ...
+\end{proof}
+
+\begin{property}
+    The inner product is $\mathbf{C}$-linear on the right and anti-C-linear on the left.
+For functions $f, g, h$ and complex numbers $\lambda, \mu$, we have
+$$
+\begin{gathered}
+\langle f \mid \lambda g+\mu h\rangle=\lambda\langle f \mid g\rangle+\mu\langle f \mid h\rangle \\
+\langle\lambda f+\mu g \mid h\rangle=\lambda^{*}\langle f \mid h\rangle+\mu^{*}\langle g \mid h\rangle
+\end{gathered}
+$$
+\end{property}
+
+\begin{proof}
+    ...
+\end{proof}
+
+
+\begin{definition}[Hilbert space]
+    The space of square-integrable functions, denoted by $L^{2}(\mathbf{R})$, is the set of functions that have finite inner-product with themselves:
+    $$
+    L^{2}(\mathbf{R})=\{f: \mathbf{R} \longrightarrow \mathbf{C},\langle f \mid f\rangle<\infty\}
+    $$
+    at any time $t$.The square root of the inner product of $f \in L^{2}(\mathbf{R})$ with itself denoted by 
+    $$
+    \|f\|=\sqrt{\langle f \mid f\rangle}
+    $$
+    is called the $L^{2}(\mathbf{R})$-norm of $f$.
+\end{definition}
+
+\begin{remark}
+    The wave function of a particle $\Psi(x,t) \in L^2(\mathbf{R})$.
+\end{remark}
+
+\subsection{Hermitian operators}
+
+\begin{definition}[Hermitian operator]
+    Consider an operator $Q$ acts on a function of $x$, if $\langle f \mid Q g\rangle = \langle Q f \mid g\rangle$ for any functions $f$, $g$ in the Hilbert space and vanish at infinity, then $Q$ i called Hermitian operator.
+\end{definition}
+
+\begin{remark}
+    Hamiltonian operator $\hat{H}$ is a Hermitian operator.
+\end{remark}
+
+\begin{proof}
+    ...
+\end{proof}
+
+\begin{remark}
+    Linear momentum $p$ is a Hermitian operator.
+\end{remark}
+
+\begin{proof}
+    ...
+\end{proof}
+
+\begin{remark}
+    Position $x$ is a Hermitian operator. ($x \in \mathbf{R}$)
+\end{remark}
+
+\begin{proof}
+    ...
+\end{proof}
+
+\subsection{The Heisenberg uncertainty principle}
+
+\begin{theorem}[The Schwarz inequality in $L^{2}(\mathbf{R})$]
+    For any two functions $f, g$ in $L^{2}(\mathbf{R})$ the following inequality is satisfied:
+$$
+\|f|\||g \| \geq|\langle f \mid g\rangle \mid
+$$
+\end{theorem}
+
+\begin{proof}
+    ...
+\end{proof}
+
+\begin{definition}[Commutator]
+    For two operators $x$ and $p$, their commutator is 
+    $$
+    [x, p]:=x p-p x .
+    $$ 
+\end{definition}
+
+\begin{theorem}[The Heisenberg uncertainty principle]
+    $$
+    \sigma_{x} \sigma_{p} \geq \frac{\hbar}{2}
+    $$
+\end{theorem}
+
+\begin{proof}
+    ...
+\end{proof}

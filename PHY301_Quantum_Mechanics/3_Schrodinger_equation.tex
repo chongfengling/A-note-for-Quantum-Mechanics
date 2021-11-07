@@ -83,7 +83,7 @@ Ehrenfest's theorem
 \end{equation}
 \boxed{obey\;classical\;laws?}
 \begin{proof}
-    ...
+    ... 
 \end{proof}
 
 
@@ -116,16 +116,31 @@ the Schrödinger equation becomes:
     -\frac{\hbar^{2}}{2 m} \frac{\psi^{\prime \prime}(x)}{\psi(x)}+V(x) & =E\label{eq9}
 \end{align}
 \paragraph{Time-dependent factor \myref{eq8}}~{}
-...
+\begin{align}
+    \phi^{\prime}(t) &= \frac{E \phi(t)}{i\hbar}\notag\\
+    \phi(t) &= \phi(0)e^{\frac{E}{i\hbar}t} \label{eq10}
+\end{align}
 \paragraph{Space-dependent factor \myref{eq9}}~{}
-...
+\begin{align}
+    -\frac{\hbar^{2}}{2 m} \psi^{\prime \prime}(x)+V(x) \psi(x)&=E \psi(x)\notag\\
+    \hat{H} \psi(x) & = E\psi(x) \label{eq11}
+\end{align}
+\myref{eq11} is called the \textbf{\emph{time-independent Schrödinger equation}}.\\
+There are reasons about why introduce time-independent Schrödinger equation:
+1. 
+2. 
 
 \begin{remark}
     $E$ is a constant number.
 \end{remark}
+
 \begin{remark}
     $E$ is a real number.
 \end{remark}
+\begin{remark}
+    $ \exp(-\frac{iEt}{\hbar})^* = \exp(\frac{iEt}{\hbar})$ when $E \in R $ 
+\end{remark}
+
 \begin{proof}
     ...
 \end{proof}
@@ -136,20 +151,133 @@ the Schrödinger equation becomes:
     ...
 \end{proof}
 \subsection{Example: the infinite square well}
-...
+Suppose     
+\begin{equation*}
+    V(x)= \begin{cases}0, & \text { if } 0 \leq x \leq a \\ \infty, & \text { otherwise }\end{cases}
+    \end{equation*}
+then $\psi(x)=0$ when $x \notin [0,a]$. When $x \in [0,a]$, we have time-independent Schrödinger $\psi(x)$ satisfied
+\begin{align}
+    -\frac{\hbar^{2}}{2 m} \frac{d^{2} \psi}{d x^{2}}&=E \psi \notag\\
+    \frac{d^{2} \psi}{d x^{2}}&=-k^{2} \psi \label{eq12}
+\end{align}
+where 
+\begin{align}
+    \boxed{k \equiv \frac{\sqrt{2 m E}}{\hbar}} \label{eq13}
+\end{align}
+\myref{eq12} is the classical simple harmonic oscillator equation with general solution
+\begin{align}
+    \psi(x)=A \sin k x+B \cos k x
+\end{align}
+where $A$ and $B$ are constant.\\
+Continuity of $\psi(x)$ requires boundary condition
+$$\psi(0)=\psi(a)=0$$
+by $\psi(0)=0$, we have $B=0$, $\psi(x)=A \sin kx$\\
+by $\psi(a)=0$,, we have trivial (non-normalizable) solution $A=0$ or $\sin kx=0$, \\$k a=0, \pm \pi, \pm 2 \pi, \pm 3 \pi, \ldots$, $k\leq 0$ is useless. Hence the distinct solutions are 
+$$
+k_{n}=\frac{n \pi}{a}, \quad \text { with } n=1,2,3, \ldots
+$$
+According to \myref{eq13}, the corresponding values of $E$ is 
+$$
+E_{n}=\frac{\hbar^{2} k_{n}^{2}}{2 m}=\frac{n^{2} \pi^{2} \hbar^{2}}{2 m a^{2}}
+$$
+To find $A$, we normalize $\Psi(x,t)$
+\begin{align*}
+    \intinfty |\Psi(x,t)|^2 dx &= 1\\
+    \intinfty \psi(x)^2 dx &=1\\
+    \intinfty |A|^2 sin^2(kx) dx &= 1\\
+    |A|^2 &=\frac{2}{a}\\
+    A &= \sqrt{\frac{2}{a}}
+\end{align*}
+
+Finally, we have solutions of time-independent Schrödinger \myref{eq11}
+$$
+\psi_{n}(x)=\sqrt{\frac{2}{a}} \sin \left(\frac{n \pi}{a} x\right)
+$$
+with corresponding energy
+$$
+E_{n}=\frac{n^{2} \pi^{2} \hbar^{2}}{2 m a^{2}}
+$$
+
+
+
+
+\paragraph{Consequence I}~{
+    if the wave function at $t=0$ is a normalized eigenfunction $\psi(x)$ (ie. $n=1$), we integrate the Schrödinger equation by introducing a phase factor, we have
+$$
+\Psi(x,t) = \exp(-\frac{iEt}{\hbar})\psi(x), \forall x, \forall t.
+$$
+$|\Psi(x,t)^|2$ and then $\langle x\rangle$ are independent on time $t$. The wave function is stationary.
+}
+
+\paragraph{Consequence II}~{
+If the wave function at $t=0$ is a sum of eigenfunction $\psi(x)$ with $c_n \in \mathbb{C} $, we integrate the Schrödinger equation by introducing phase factors, we have
+$$
+\Psi(x,t) = A \exp{-\frac{iE_1 t}{\hbar}}\psi_1(x) + B \exp{-\frac{iE_2 t}{\hbar}}\psi_2(x), A \in \mathbb{C},\forall x, \forall t
+$$
+if $E_1\neq E_2$, then $|\Psi(x,t)|^2$ and then $\langle x\rangle$ are dependent on time $t$. The wave function is a periodic function of time.
+}
+
+
+
+
+
 
 \subsection{The free particle: time-dependent solutions}
-...
-
-\subsection{Example: Gaussian wave packet}
-the wave function is
-$$
-    \Psi(x, t)=\frac{1}{(2 \pi)^{\frac{1}{4}} \sqrt{\sigma}\left(1+\frac{i \hbar t}{2 m \sigma^{2}}\right)^{\frac{1}{4}}} \exp \left(-\frac{x^{2}}{4 \sigma^{2}\left(1+\frac{i \hbar t}{2 m \sigma^{2}}\right)}\right)
-$$
-calculate $\Psi(x,t)^*\Psi(x,t)$, we have
+When $V(x)=0$, we have 
 \begin{align*}
-    \Psi(x,t)^*\Psi(x,t) & =  \frac{1}{(2 \pi)^{\frac{1}{2}} \sigma \left(\left(1+\frac{i \hbar t}{2 m \sigma^{2}}\right) \left(1-\frac{i \hbar t}{2 m \sigma^{2}}\right)\right)^{\frac{1}{4}}} \exp(-\frac{x^2}{4\sigma^2} (\frac{1}{1+\frac{i \hbar t}{2 m \sigma^2}}+\frac{1}{1-\frac{i \hbar t}{2 m \sigma^2}})) \\
-                         & =  \frac{1}{(2 \pi)^\frac{1}{2} \sigma (1+(\frac{\hbar t}{2 m \sigma^2})^2)^\frac{1}{4}} \exp(-\frac{x^2}{2 \sigma^2 (1+(\frac{\hbar t}{2 m \sigma^2})^2)})                                                                                                                               \\
-                         & = \frac{\sqrt{w}}{\sqrt{\sigma \pi}} \exp(-2 w^2 x^2)
+    i \hbar \frac{\phi^{\prime}(t)}{\phi(t)}                            & =E  \\
+    -\frac{\hbar^{2}}{2 m} \frac{\psi^{\prime \prime}(x)}{\psi(x)} & =E
 \end{align*}
-in terms of the quantity $w = \frac{1}{2 \sigma} \frac{1}{\sqrt{1+(\frac{\hbar t}{2 m \sigma^2})^2}}$
+by \myref{eq8}, \myref{eq9}. let $k \equiv \frac{\sqrt{2 m E}}{\hbar} > 0$, we get general solution
+\begin{align*}
+    \Psi(x, t)=A e^{i k\left(x-\frac{\hbar k}{2 m} t\right)}+B e^{-i k\left(x+\frac{\hbar k}{2 m} t\right)}
+\end{align*}
+let $k \equiv \pm \frac{\sqrt{2 m E}}{\hbar}$
+the solution becomes
+\begin{align}
+    \Psi_{k}(x, t)=A e^{i\left(k x-\frac{\hbar k^{2}}{2 m} t\right)} \label{eq14}
+\end{align}
+\myref{eq14} has a space period $\lambda$ and a time period $T$.\\
+\myref{eq14} is not normalizable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% \subsection{Example: Gaussian wave packet}
+% the wave function is
+% $$
+%     \Psi(x, t)=\frac{1}{(2 \pi)^{\frac{1}{4}} \sqrt{\sigma}\left(1+\frac{i \hbar t}{2 m \sigma^{2}}\right)^{\frac{1}{4}}} \exp \left(-\frac{x^{2}}{4 \sigma^{2}\left(1+\frac{i \hbar t}{2 m \sigma^{2}}\right)}\right)
+% $$
+% calculate $\Psi(x,t)^*\Psi(x,t)$, we have
+% \begin{align*}
+%     \Psi(x,t)^*\Psi(x,t) & =  \frac{1}{(2 \pi)^{\frac{1}{2}} \sigma \left(\left(1+\frac{i \hbar t}{2 m \sigma^{2}}\right) \left(1-\frac{i \hbar t}{2 m \sigma^{2}}\right)\right)^{\frac{1}{4}}} \exp(-\frac{x^2}{4\sigma^2} (\frac{1}{1+\frac{i \hbar t}{2 m \sigma^2}}+\frac{1}{1-\frac{i \hbar t}{2 m \sigma^2}})) \\
+%                          & =  \frac{1}{(2 \pi)^\frac{1}{2} \sigma (1+(\frac{\hbar t}{2 m \sigma^2})^2)^\frac{1}{4}} \exp(-\frac{x^2}{2 \sigma^2 (1+(\frac{\hbar t}{2 m \sigma^2})^2)})                                                                                                                               \\
+%                          & = \frac{\sqrt{w}}{\sqrt{\sigma \pi}} \exp(-2 w^2 x^2)
+% \end{align*}
+% in terms of the quantity $w = \frac{1}{2 \sigma} \frac{1}{\sqrt{1+(\frac{\hbar t}{2 m \sigma^2})^2}}$
