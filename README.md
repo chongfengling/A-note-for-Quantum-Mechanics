@@ -1,1 +1,1 @@
-# Notes by Chongfeng Ling
+# A note of Quantum Mechanics
